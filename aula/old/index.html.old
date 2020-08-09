@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Aula</title>
+</head>
+
+<body>
+
+    <div id='app'>
+        <div class="box"></div>
+        <input type="text" class="in1" name="in" id="1" />
+        <!-- <button onclick="fun()">Eu</button> -->
+        <button class="bt">Add</button>
+    </div>
+
+    <script>
+        var elen = document.querySelector("button.bt");
+        // === eh o mesmo que equals
+        var obj = {
+            n: "oi",
+            p: false,
+            f: f => {
+                return f;
+            }
+        };
+        elen.onclick = function() {
+            var inn = document.querySelector("input.in1");
+            alert(inn.value);
+        }
+
+        var extra = document.createElement('a');
+        extra.setAttribute('href', 'http://rocketseat.com.br');
+        var text = document.createTextNode('link');
+        extra.appendChild(text);
+        var container = document.querySelector('#app');
+        container.appendChild(extra);
+
+        var haha = obj.n;
+        console.log(obj.n, obj.f("orra"));
+
+        function fun() {
+            alert("rai do cao");
+        }
+
+        var retorno = (obj.n === "oi") ? "bença" : "vtnc";
+        console.log(retorno);
+        /*setInterval(fun, 2000);
+        setTimeout(fun, 1000);*/
+    </script>
+
+</body>
+
+</html>

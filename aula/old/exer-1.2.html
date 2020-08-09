@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Aula</title>
+</head>
+
+<body>
+
+    <div id='app'>
+        <button class="bt"></button>
+    </div>
+
+    <script>
+        var button = document.querySelector('.bt');
+        button.onclick = function() {
+            var newSquare = document.createElement('canvas');
+            newSquare.style.height = 50;
+            newSquare.style.width = 50;
+            newSquare.onmouseover = function() {
+                newSquare.style.backgroundColor = randomHexColor();
+            };
+            newSquare.style.backgroundColor = '#9D2F9C';
+            document.querySelector('#app').appendChild(newSquare);
+        };
+
+        function randomHexColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+
+</body>
+
+</html>

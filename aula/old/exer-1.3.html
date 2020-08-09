@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Aula</title>
+</head>
+
+<body>
+
+    <div id='app'>
+        <input type="text" class="in"></input>
+        <button class="bt" onclick="add()"></button>
+        <ul class="lista"></ul>
+    </div>
+
+    <script>
+        var nomes = ['Diego', 'Gabriel', 'Lucas'];
+
+        var lista = document.querySelector('.lista');
+        var text = document.querySelector('.in');
+
+        for (nome of nomes) {
+            var element = document.createElement('li');
+            element.appendChild(document.createTextNode(nome));
+            lista.appendChild(element);
+        }
+
+        function add() {
+            var element = document.createElement('li');
+            element.appendChild(document.createTextNode(text.value));
+            lista.appendChild(element);
+            text.value = '';
+        }
+    </script>
+
+</body>
+
+</html>

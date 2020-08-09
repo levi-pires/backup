@@ -1,0 +1,8 @@
+B = Business
+E = Employee
+C = final Client
+
+business doesn't have a client model
+
+sacada: nao faca o servidor entregar os dados do mapa, apenas faca o bind entre os clientes
+
